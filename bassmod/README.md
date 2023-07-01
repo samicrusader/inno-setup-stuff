@@ -2,7 +2,7 @@
 
 The BASS module works well in Pascal, allowing for your installer to play music. This code plays a file called `music.ogg`.
 
-```inno
+```pascal
 [Files]
 Source: "bass.dll"; Flags: dontcopy
 Source: "music.ogg"; Flags: dontcopy
