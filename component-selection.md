@@ -2,7 +2,7 @@
 
 If you're building an installer that has both normal and portable install methods, you'd likely want any data to be alongside the application, instead of in another directory. This is how to disable other components when one is checked.
 
-```inno
+```pascal
 [Code]
 var
     ComponentsVisited: Boolean;
