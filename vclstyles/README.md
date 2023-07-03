@@ -21,3 +21,13 @@ begin
   LoadVCLStyle(ExpandConstant('{tmp}\Glow.vsf'));
 end;
 ```
+With Inno Setup 6.x, there's a new bug with the previous/next/exit buttons being misaligned. This is a quick fix however:
+```pascal
+<event('InitializeWizard')>
+procedure InitializeWizardVCLStylesFix();
+begin
+  WizardForm.NextButton.Left := WizardForm.BackButton.Left + WizardForm.BackButton.Width + ScaleX(2);
+  WizardForm.CancelButton.Left := WizardForm.NextButton.Left + WizardForm.NextButton.Width + ScaleX(3);
+  WizardForm.CancelButton.Top := WizardForm.NextButton.Top;
+end;
+```
